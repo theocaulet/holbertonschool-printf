@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format == NULL)
-			return (0);
+			return (-1);
 		if (format[i] != '%')
 		{
 			write(1, &format[i], 1);
