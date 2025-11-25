@@ -23,10 +23,10 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
+	if (format == NULL)
+		return (-1);
 	while (format != NULL && format[i] != '\0')
 	{
-		if (format == NULL)
-			return (-1);
 		if (format[i] != '%')
 		{
 			write(1, &format[i], 1);
@@ -34,26 +34,26 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		else
+		{
+			found = 0;
+			for (j_printers = 0; j_printers < 3; j_printers++)
 			{
-				found = 0;
-				for (j_printers = 0; j_printers < 3; j_printers++)
+				if (format[i + 1] == printers[j_printers].type)
 				{
-					if (format[i + 1] == printers[j_printers].type)
-					{
-						count += printers[j_printers].function(args);
-						i += 2;
-						found = 1;
-						break;
-					}
-				}
-				if (found == 0)
-				{
-					write(1, &format[i], 1);
-					write(1, &format[i + 1], 1);
-					count += 2;
+					count += printers[j_printers].function(args);
 					i += 2;
+					found = 1;
+					break;
 				}
 			}
+			if (found == 0)
+			{
+				write(1, &format[i], 1);
+				write(1, &format[i + 1], 1);
+				count += 2;
+				i += 2;
+			}
+		}
 	}
 	va_end(args);
 	return (count);
