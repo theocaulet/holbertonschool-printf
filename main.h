@@ -20,9 +20,9 @@ typedef struct formats
 	int (*function)(va_list);
 } checker;
 
-int print_char(va_list ap);
-int print_string(va_list ap);
-int print_p(va_list ap);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_p(va_list args);
 
 
 

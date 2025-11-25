@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 			}
 			if (format[i + 1] == '%')
 			{
-				count += print_char(args);
+				count += print_p(args);
 				i += 2;
 			}
 			else
