@@ -29,6 +29,11 @@ int _printf(const char *format, ...)
 				count += print_string(args);
 				i += 2;
 			}
+			if (format[i + 1] == '%')
+			{
+				count += print_char(args);
+				i += 2;
+			}
 			else
 			{
 
