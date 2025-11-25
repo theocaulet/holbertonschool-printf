@@ -10,44 +10,49 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	int count = 0;
+	int j_printers = 0;
+	int found = 0;
 
 	va_list args;
+
+	checker printers[] = {
+		{'c', print_char},
+		{'s', print_string},
+		{'%', print_p},
+		{0, NULL}};
 
 	va_start(args, format);
 
 	while (format != NULL && format[i] != '\0')
 	{
-		if (format[i] == '%')
-		{
-			if (format[i + 1] == 'c')
-			{
-				count += print_char(args);
-				i += 2;
-			}
-			if (format[i + 1] == 's')
-			{
-				count += print_string(args);
-				i += 2;
-			}
-			if (format[i + 1] == '%')
-			{
-				count += print_p(args);
-				i += 2;
-			}
-			else
-			{
-
-				write(1, &format[i], 1);
-				count++;
-				i++;
-			}
-		}
-		else
+		if (format[i] != '%')
 		{
 			write(1, &format[i], 1);
 			count++;
 			i++;
 		}
+		else
+			{
+				found = 0;
+				for (j_printers = 0; j_printers < 3; j_printers++)
+				{
+					if (format[i + 1] == printers[j_printers].type)
+					{
+						count += printers[j_printers].function(args);
+						i += 2;
+						found = 1;
+						break;
+					}
+				}
+				if (found == 0)
+				{
+					write(1, &format[i], 1);
+					write(1, &format[i + 1], 1);
+					count += 2;
+					i += 2;
+				}
+			}
 	}
+	va_end(args);
 	return (count);
 }
