@@ -14,6 +14,7 @@ int print_string(va_list args)
 	if (str == NULL)
 	{
 		write(1, "(nil)", 5);
+		return (5);
 	}
 
 	len = strlen(str);
