@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			if (format[i] == '%' && format[i + 1] == '\0')
-				return (0);
+				return (-1);
 			found = 0;
 			for (j_printers = 0; j_printers < 5; j_printers++)
 			{
