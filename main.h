@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int _printf(const char *format, ...);
 
@@ -23,7 +24,8 @@ typedef struct formats
 int print_char(va_list args);
 int print_string(va_list args);
 int print_p(va_list args);
-
+int print_i(va_list args);
+int print_d(va_list args);
 
 
 #endif
