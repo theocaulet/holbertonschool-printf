@@ -8,54 +8,51 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int count = 0;
-	int j_printers = 0;
-	int found = 0;
+	int format_index = 0, count = 0, printer_index = 0, found = 0;
 
 	va_list args;
 
 	checker printers[] = {
 		{'c', print_char},
 		{'s', print_string},
-		{'%', print_p},
-		{'i', print_i},
-		{'d', print_d},
+		{'%', print_percent},
+		{'i', print_int},
+		{'d', print_decimal},
 		{0, NULL}};
 
 	va_start(args, format);
 
 	if (format == NULL)
 		return (-1);
-	while (format != NULL && format[i] != '\0')
+	while (format != NULL && format[format_index] != '\0')
 	{
-		if (format[i] != '%')
+		if (format[format_index] != '%')
 		{
-			write(1, &format[i], 1);
+			write(1, &format[format_index], 1);
 			count++;
-			i++;
+			format_index++;
 		}
 		else
 		{
-			if (format[i] == '%' && format[i + 1] == '\0')
+			if (format[i] == '%' && format[format_index + 1] == '\0')
 				return (-1);
 			found = 0;
-			for (j_printers = 0; j_printers < 5; j_printers++)
+			for (printer_index = 0; printer_index < 5; printer_index++)
 			{
-				if (format[i + 1] == printers[j_printers].type)
+				if (format[format_index + 1] == printers[printer_index].type)
 				{
-					count += printers[j_printers].function(args);
-					i += 2;
+					count += printers[printer_index].function(args);
+					format_index += 2;
 					found = 1;
 					break;
 				}
 			}
 			if (found == 0)
 			{
-				write(1, &format[i], 1);
-				write(1, &format[i + 1], 1);
+				write(1, &format[format_index], 1);
+				write(1, &format[format_index + 1], 1);
 				count += 2;
-				i += 2;
+				format_index += 2;
 			}
 		}
 	}

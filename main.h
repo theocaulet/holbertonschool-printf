@@ -23,9 +23,8 @@ typedef struct formats
 
 int print_char(va_list args);
 int print_string(va_list args);
-int print_p(va_list args);
-int print_i(va_list args);
-int print_d(va_list args);
-
+int print_percent(va_list args);
+int print_int(va_list args);
+int print_decimal(va_list args);
 
 #endif
