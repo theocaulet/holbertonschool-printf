@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (format[i] == '%' && format[i + 1] == '\0')
+			if (format[i] == '%' && format[format_index + 1] == '\0')
 				return (-1);
 			found = 0;
 			for (printer_index = 0; printer_index < 5; printer_index++)
