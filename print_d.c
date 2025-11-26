@@ -3,10 +3,11 @@
 int print_d(va_list args)
 
 {
-    long int d = va_arg(args, int);
-    char str[12] = "%d";
-    sprintf(str, "%d", d);
-    write(1, &str, sizeof(long int));
+    int d = va_arg(args, int);
+    char str[12];
+    int len = sprintf(str, "%d", d);
+    
+    write(1, str, len);
 
-	return (d);
+	return (len);
 }
