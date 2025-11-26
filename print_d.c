@@ -8,5 +8,5 @@ int print_d(va_list args)
     sprintf(str, "%d", d);
     write(1, &str, sizeof(long int));
 
-	return (1);
+	return (d);
 }
