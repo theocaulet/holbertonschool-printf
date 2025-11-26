@@ -19,6 +19,8 @@ int _printf(const char *format, ...)
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_p},
+		{'i', print_i},
+		{'d', print_d},
 		{0, NULL}};
 
 	va_start(args, format);
@@ -36,7 +38,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			found = 0;
-			for (j_printers = 0; j_printers < 3; j_printers++)
+			for (j_printers = 0; j_printers < 5; j_printers++)
 			{
 				if (format[i + 1] == printers[j_printers].type)
 				{
