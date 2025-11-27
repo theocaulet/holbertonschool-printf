@@ -37,7 +37,9 @@ At the end of the project, we should be able to explain to anyone, without the h
 ## **Requierements**
 
 - The program for our project will be compiled using:
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c print_i.c print_string.c print_char.c print_p.c main.h print_d.c -o ./prog
+```
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c print_i.c print_string.c print_char.c print_p.c main.h print_d.c -o
+```
 - The code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl.
 - No more than 5 functions per file.
 - The prototypes of all our functions are included in our header file called "main.h".
@@ -80,13 +82,16 @@ git clone https://github.com/theocaulet/holbertonschool-printf.git
 2 - Open the cloned repository.
 
 3 - Compile the program :
+```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c print_i.c print_string.c print_char.c print_p.c main.h print_d.c -o
+```
 
 ### **Usage**
 
 1 - Run the program with the main test file :
+```
 ./prog
-
+```
 With the main test file included, you should obtain the following output:
 ```
 Let's try to printf a simple sentence.
