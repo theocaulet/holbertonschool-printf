@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[format_index] != '%')
 		{
-			write(1, &format[format_index], 1),
+			write(1, &format[format_index], 1);
 			count++;
 			format_index++;
 		}
@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[format_index] == '%' && format[format_index + 1] == '\0')
 				return (-1);
-			for (found = 0, printer_index = 0; printer_index < 5; printer_index++)
+			for (found = 0, printer_index = 0; printer_index < 6; printer_index++)
 			{
 				if (format[format_index + 1] == printers[printer_index].type)
 				{

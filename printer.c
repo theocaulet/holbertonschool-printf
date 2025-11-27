@@ -13,6 +13,6 @@ checker printers[] = {
 	{'%', print_percent},
 	{'i', print_int},
 	{'d', print_decimal},
-	{'u', u_int_to_binary},
+	{'b', u_int_to_binary},
 	{0, NULL}};
 
