@@ -21,10 +21,6 @@ typedef struct formats
 	int (*function)(va_list);
 } checker;
 
-int print_char(va_list args);
-int print_string(va_list args);
-int print_percent(va_list args);
-int print_int(va_list args);
-int print_decimal(va_list args);
+extern checker printers[];
 
 #endif
