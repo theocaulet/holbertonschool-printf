@@ -20,6 +20,7 @@ This repository provides:
 It's one possible solution among others, but here's the one we came up with by creating our flowchart.
 
 ![Flowchart of the project](assets/Flowchart%20_printf.png)
+[Voici le format PDF](assets/Flowchart_printf.pdf)
 
 ## **Objectives**
 
@@ -36,7 +37,9 @@ At the end of the project, we should be able to explain to anyone, without the h
 ## **Requierements**
 
 - The program for our project will be compiled using:
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c print_i.c print_string.c print_char.c print_p.c main.h print_d.c -o ./prog
+```
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c print_i.c print_string.c print_char.c print_p.c main.h print_d.c -o
+```
 - The code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl.
 - No more than 5 functions per file.
 - The prototypes of all our functions are included in our header file called "main.h".
@@ -46,9 +49,9 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c prin
 
 ### **Mandatory**
 
-- 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life.
-- 1. Education is when you read the fine print. Experience is what you get if you don't.
-- 2. Just because it's in print doesn't mean it's the gospel.
+- 0 - I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life.
+- 1 - Education is when you read the fine print. Experience is what you get if you don't.
+- 2 - Just because it's in print doesn't mean it's the gospel.
 
 ## **Tech Stack**
 
@@ -60,8 +63,10 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c prin
 ## **File Description**
 
 | **File** | **Description** |
+|------------|-----------------------------------------------------------------------------|
 | README.md | Project documentation: explains the purpose, installation steps, usage, project structure, and the technologies used. |
 | _printf | Folder containing all the files of the project |
+| assets | Folder containing the flowchart for the README | 
 
 ## **Installation & Usage**
 
@@ -77,14 +82,18 @@ git clone https://github.com/theocaulet/holbertonschool-printf.git
 2 - Open the cloned repository.
 
 3 - Compile the program :
+```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c print_i.c print_string.c print_char.c print_p.c main.h print_d.c -o
+```
 
 ### **Usage**
 
 1 - Run the program with the main test file :
+```
 ./prog
-
+```
 With the main test file included, you should obtain the following output:
+```
 Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
 Length:[39, 39]
@@ -109,6 +118,7 @@ Len:[12]
 Len:[12]
 Unknown:[%r]
 Unknown:[%r]
+```
 
 ## **Thanks**
 
@@ -121,4 +131,4 @@ We thank Holberton School for this project and for allowing us to work in pairs.
 
 ### **Théo Caulet**
     - Github: https://github.com/theocaulet
-    
+
