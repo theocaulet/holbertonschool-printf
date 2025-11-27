@@ -1,0 +1,53 @@
+.TH _PRINTF 3 "2025-11-26" "v1.0" "_printf Manual"
+
+.SH NAME
+_printf \- Format and print data
+
+.SH SYNOPSIS
+.B _printf
+_printf(const char *format, ...);
+
+.SH DESCRIPTION
+.B _printf
+displays text formatted according to a string passed as an argument. 
+It supports certain specifiers such as %c, %s, %d, %i, etc.
+The function works similarly to the standard printf function in C.
+
+.SH RETURN VALUE
+Returns the number of characters printed.  
+If an output error occurs (for example, if the underlying write fails), it returns -1.
+
+.SH EXAMPLES
+.nf
+/* Print value */
+_printf("Value : %d\n", 42);
+OUTPUT:
+Value : 42
+
+/* Print signed value */
+_printf("Signed value : %i\n", -98);
+OUTPUT:
+Signed value : -98
+
+/* Print string */
+_printf("Name : %s\n", "Bonjour");
+OUTPUT:
+Name : Bonjour
+
+/* Print multiple formats */
+_printf("Char: %c, String: %s, Number: %d\n", 'A', "Test", 123);
+OUTPUT:
+Char: A, String: Test, Number: 123
+
+/* Print percentage */
+_printf("Progress: 100%% complete\n");
+OUTPUT:
+Progress: 100% complete
+.fi
+
+.SH AUTHOR
+Théo Caulet,
+Florian Roosebeke
+
+.SH SEE ALSO
+printf(3)
