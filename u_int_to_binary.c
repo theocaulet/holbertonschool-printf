@@ -38,3 +38,4 @@ int u_int_to_binary(va_list args)
 
 	return (binary_index);
 }
+
