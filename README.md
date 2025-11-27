@@ -61,8 +61,10 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c prin
 ## **File Description**
 
 | **File** | **Description** |
+|------------|-----------------------------------------------------------------------------|
 | README.md | Project documentation: explains the purpose, installation steps, usage, project structure, and the technologies used. |
 | _printf | Folder containing all the files of the project |
+| assets | Folder containing the flowchart for the README | 
 
 ## **Installation & Usage**
 
@@ -86,6 +88,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c prin
 ./prog
 
 With the main test file included, you should obtain the following output:
+```
 Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
 Length:[39, 39]
@@ -110,6 +113,7 @@ Len:[12]
 Len:[12]
 Unknown:[%r]
 Unknown:[%r]
+```
 
 ## **Thanks**
 
