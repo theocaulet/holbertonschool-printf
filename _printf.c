@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[format_index] != '%')
 		{
-			write(1, &format[format_index], 1),
+			write(1, &format[format_index], 1);
 			count++;
 			format_index++;
 		}
