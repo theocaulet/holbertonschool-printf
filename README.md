@@ -20,6 +20,7 @@ This repository provides:
 It's one possible solution among others, but here's the one we came up with by creating our flowchart.
 
 ![Flowchart of the project](assets/Flowchart%20_printf.png)
+[Voici le format PDF](assets/Flowchart_printf.pdf)
 
 ## **Objectives**
 
@@ -46,9 +47,9 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c prin
 
 ### **Mandatory**
 
-- 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life.
-- 1. Education is when you read the fine print. Experience is what you get if you don't.
-- 2. Just because it's in print doesn't mean it's the gospel.
+- 0 - I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life.
+- 1 - Education is when you read the fine print. Experience is what you get if you don't.
+- 2 - Just because it's in print doesn't mean it's the gospel.
 
 ## **Tech Stack**
 
@@ -121,4 +122,4 @@ We thank Holberton School for this project and for allowing us to work in pairs.
 
 ### **Théo Caulet**
     - Github: https://github.com/theocaulet
-    
+
