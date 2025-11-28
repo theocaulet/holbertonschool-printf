@@ -6,6 +6,7 @@ int print_percent(va_list args);
 int print_int(va_list args);
 int print_decimal(va_list args);
 int u_int_to_binary(va_list args);
+int print_base_10(va_list args);
 
 checker printers[] = {
 	{'c', print_char},
@@ -14,6 +15,8 @@ checker printers[] = {
 	{'i', print_int},
 	{'d', print_decimal},
 	{'b', u_int_to_binary},
-	{'u', print_base},
+	{'u', print_base_10},
 	{0, NULL}};
+
+
 
