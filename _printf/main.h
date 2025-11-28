@@ -10,12 +10,12 @@
 int _printf(const char *format, ...);
 
 /**
- * struct formats - Structure for format specifiers
+ * struct checker - Structure for format specifiers
  * @type: The format specifier character
  * @function: Pointer to the function that handles the format
  */
 
-typedef struct formats
+typedef struct checker
 {
 	char type;
 	int (*function)(va_list);
