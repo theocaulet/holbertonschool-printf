@@ -10,8 +10,6 @@ int print_base_10(va_list args);
 int print_base_8(va_list args);
 int print_base_16(va_list args);
 int print_base_16_upper(va_list args);
-int print_pointer(va_list args);
-int print_hex(unsigned long n);
 
 checker printers[] = {
 	{'c', print_char},
@@ -24,7 +22,6 @@ checker printers[] = {
 	{'o', print_base_8},
 	{'x', print_base_16},
 	{'X', print_base_16_upper},
-	{'p', print_pointer},
 	{0, NULL}};
 
 
