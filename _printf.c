@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[format_index] == '%' && format[format_index + 1] == '\0')
 				return (-1);
-			for (found = 0, printer_index = 0; printer_index < 7; printer_index++)
+			for (found = 0, printer_index = 0; printer_index < 10 ; printer_index++)
 			{
 				if (format[format_index + 1] == printers[printer_index].type)
 				{
