@@ -24,4 +24,3 @@ typedef struct formats
 extern checker printers[];
 
 #endif
-
