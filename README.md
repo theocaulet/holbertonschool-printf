@@ -19,7 +19,7 @@ This repository provides:
 
 It's one possible solution among others, but here's the one we came up with by creating our flowchart.
 
-![Flowchart of the project](assets/Flowchart%20_printf.png)
+![Flowchart of the project](assets/Flowchart_printf.jpeg)
 [Voici le format PDF](assets/Flowchart_printf.pdf)
 
 ## **Objectives**
