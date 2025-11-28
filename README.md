@@ -39,7 +39,7 @@ At the end of the project, we should be able to explain to anyone, without the h
 - The program for our project will be compiled using:
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c print_int.c print_string
-.c print_char.c print_percent.c main.h print_decimal.c printer.c -o ./prog
+.c print_char.c print_percent.c main.h print_decimal.c printer.c -o 
 ```
 - The code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl.
 - No more than 5 functions per file.
@@ -85,7 +85,7 @@ git clone https://github.com/theocaulet/holbertonschool-printf.git
 3 - Compile the program :
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c main.c print_int.c print_string
-.c print_char.c print_percent.c main.h print_decimal.c printer.c -o ./prog
+.c print_char.c print_percent.c main.h print_decimal.c printer.c -o
 ```
 
 ### **Usage**
