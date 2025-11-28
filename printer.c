@@ -14,5 +14,6 @@ checker printers[] = {
 	{'i', print_int},
 	{'d', print_decimal},
 	{'b', u_int_to_binary},
+	{'u', print_base},
 	{0, NULL}};
 
