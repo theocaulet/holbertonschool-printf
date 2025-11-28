@@ -24,7 +24,7 @@ int print_hex(unsigned long n)
  *
  * Return: Number of characters printed.
  */
- 
+
 int print_pointer(va_list args)
 {
     void *ptr = va_arg(args, void *);
